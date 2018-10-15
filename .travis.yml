@@ -15,11 +15,8 @@ before_install:
 - docker pull dosel/zalenium
     
 # Run it!
-- docker run -ti --name zalenium -p 4444:4444 \
-      -v /var/run/docker.sock:/var/run/docker.sock \
-      -v /tmp/videos:/home/seluser/videos \
-      --privileged dosel/zalenium start
+- docker run -ti --name zalenium -p 4444:4444 -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/videos:/home/seluser/videos  --privileged dosel/zalenium start
 
 
 script:
-- sleep 5m
+- sleep 15m
